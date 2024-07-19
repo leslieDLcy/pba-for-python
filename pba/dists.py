@@ -2143,8 +2143,8 @@ def uniform(a, b, steps = 200):
     if b.__class__.__name__ != 'Interval':
         b = Interval(b,b)
 
-    Left = np.linspace(a.left,b.left)
-    Right = np.linspace(a.right,b.right)
+    Left = np.linspace(a.left,b.left, steps)
+    Right = np.linspace(a.right,b.right, steps)
 
     mean = 0.5 * (a+b)
     var = ((b-a)**2 )/12
